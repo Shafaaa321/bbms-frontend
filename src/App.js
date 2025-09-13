@@ -32,6 +32,7 @@ import HospitalNotifications from './pages/hospital/Notifications';
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ApproveHospitals from './pages/admin/ApproveHospitals';
+import RegisteredDonors from './pages/admin/RegisteredDonors';
 import Analytics from './pages/admin/Analytics';
 import AuditLogs from './pages/admin/AuditLogs';
 import Settings from './pages/admin/Settings';
@@ -40,12 +41,10 @@ import DonationRecords from './pages/admin/DonationRecords';
 
 // Staff Pages
 import StaffDashboard from './pages/staff/Dashboard';
-import DonorRequests from './pages/staff/DonorRequests';
+import ApproveDonationRequests from './pages/staff/ApproveDonationRequests';
+import ApproveBloodRequests from './pages/staff/ApproveBloodRequests';
 import StaffNotifications from './pages/staff/Notifications';
 import ManageAppointments from './pages/staff/ManageAppointments';
-
-
-
 
 function App() {
   const { isLoggedIn, role, subRole } = useRole();
@@ -63,23 +62,25 @@ function App() {
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="approve-hospitals" element={<ApproveHospitals />} />
+          <Route path="registered-donors" element={<RegisteredDonors />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="audit-logs" element={<AuditLogs />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="hospital-activities" element={<HospitalActivities />} />
+          <Route path="donation-records" element={<DonationRecords />} />
         </Route>
       )}
 
       {/* Donor Routes */}
-{isLoggedIn && role === 'user' && subRole === 'donor' && (
-  <Route path="/donor" element={<DonorLayout />}>
-    <Route path="dashboard" element={<DonorDashboard />} />
-    <Route path="eligibility" element={<DonorEligibility />} />
-    <Route path="history" element={<DonationHistory />} />
-    <Route path="notifications" element={<DonorNotifications />} />
-    <Route path="request-donate" element={<RequestToDonate />} /> {/* Corrected */}
-  </Route>
-)}
-
+      {isLoggedIn && role === 'user' && subRole === 'donor' && (
+        <Route path="/donor" element={<DonorLayout />}>
+          <Route path="dashboard" element={<DonorDashboard />} />
+          <Route path="eligibility" element={<DonorEligibility />} />
+          <Route path="history" element={<DonationHistory />} />
+          <Route path="notifications" element={<DonorNotifications />} />
+          <Route path="request-donate" element={<RequestToDonate />} />
+        </Route>
+      )}
 
       {/* Hospital Routes */}
       {isLoggedIn && role === 'user' && subRole === 'receiver' && (
@@ -94,15 +95,14 @@ function App() {
 
       {/* Staff Routes */}
       {isLoggedIn && role === 'staff' && (
-  <Route path="/staff" element={<StaffLayout />}>
-    <Route path="dashboard" element={<StaffDashboard />} />
-    <Route path="donor-requests" element={<DonorRequests />} />
-    <Route path="donation-records" element={<DonationRecords />} />
-    <Route path="manage-appointments" element={<ManageAppointments />} />
-    <Route path="notifications" element={<StaffNotifications />} />
-    <Route path="hospital-activities" element={<HospitalActivities />} />
-  </Route>
-)}
+        <Route path="/staff" element={<StaffLayout />}>
+          <Route path="dashboard" element={<StaffDashboard />} />
+          <Route path="approve-donation-requests" element={<ApproveDonationRequests />} />
+          <Route path="approve-blood-requests" element={<ApproveBloodRequests />} />
+          <Route path="manage-appointments" element={<ManageAppointments />} />
+          <Route path="notifications" element={<StaffNotifications />} />
+        </Route>
+      )}
 
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" />} />

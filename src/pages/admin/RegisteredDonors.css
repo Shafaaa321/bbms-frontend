@@ -1,0 +1,33 @@
+.registered-donors {
+  padding: 20px;
+}
+
+.registered-donors h2 {
+  margin-bottom: 20px;
+  color: #d32f2f;
+}
+
+.registered-donors table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.registered-donors th,
+.registered-donors td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.registered-donors th {
+  background-color: #f44336;
+  color: white;
+}
+
+.registered-donors tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.registered-donors tr:hover {
+  background-color: #f1f1f1;
+}

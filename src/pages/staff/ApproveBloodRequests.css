@@ -1,0 +1,62 @@
+.blood-requests-page {
+  padding: 2rem;
+}
+
+.requests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.request-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.request-card h3 {
+  margin-top: 0;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.pending {
+  color: #f0ad4e;
+}
+
+.status.approved {
+  color: #5cb85c;
+}
+
+.status.rejected {
+  color: #d9534f;
+}
+
+.action-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.approve-btn {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

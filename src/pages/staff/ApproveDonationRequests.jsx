@@ -1,6 +1,6 @@
-// src/pages/staff/DonorRequests.jsx
+// src/pages/staff/approveDonationRequests.jsx
 import React, { useState } from 'react';
-import './DonorRequests.css';
+import './ApproveDonationRequests.css';
 
 const mockRequests = [
   {
@@ -19,7 +19,7 @@ const mockRequests = [
   },
 ];
 
-const DonorRequests = () => {
+const ApproveDonationRequests = () => {
   const [requests, setRequests] = useState(mockRequests);
 
   const handleDecision = (id, status) => {
@@ -65,4 +65,4 @@ const DonorRequests = () => {
   );
 };
 
-export default DonorRequests;
+export default ApproveDonationRequests;

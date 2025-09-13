@@ -12,6 +12,7 @@ import {
   FaChartBar,
   FaBox,
   FaHospital,
+  FaUsers,
 } from 'react-icons/fa';
 import { useRole } from '../RoleContext';
 import './Sidebar.css';
@@ -25,12 +26,12 @@ const Sidebar = () => {
 
   const navItems = {
     donor: [
-  { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
-  { path: 'eligibility', icon: <FaCheckCircle />, label: 'Eligibility' },
-  { path: 'history', icon: <FaHistory />, label: 'History' },
-  { path: 'request-donate', icon: <FaClipboardList />, label: 'Request to Donate' }, // <-- fixed path
-  { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
-],
+      { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
+      { path: 'eligibility', icon: <FaCheckCircle />, label: 'Eligibility' },
+      { path: 'history', icon: <FaHistory />, label: 'History' },
+      { path: 'request-donate', icon: <FaClipboardList />, label: 'Request to Donate' },
+      { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
+    ],
 
     receiver: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
@@ -39,18 +40,22 @@ const Sidebar = () => {
       { path: 'request-status', icon: <FaCheckCircle />, label: 'Request Status' },
       { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
     ],
+
     admin: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
       { path: 'approve-hospitals', icon: <FaHospital />, label: 'Approve Hospitals' },
       { path: 'hospital-activities', icon: <FaHospital />, label: 'Hospital Activities' },
-       { path: 'donation-records', icon: <FaHistory />, label: 'Donation Records' },
+      { path: 'registered-donors', icon: <FaUsers />, label: 'Registered Donors' },
+      { path: 'donation-records', icon: <FaHistory />, label: 'Donation Records' },
       { path: 'analytics', icon: <FaChartBar />, label: 'Analytics' },
       { path: 'audit-logs', icon: <FaClipboardList />, label: 'Audit Logs' },
       { path: 'settings', icon: <FaBell />, label: 'Settings' },
     ],
+
     staff: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
-      { path: 'donor-requests', icon: <FaClipboardList />, label: 'Donor Requests' },
+      { path: 'approve-donation-requests', icon: <FaClipboardList />, label: 'Donation Requests' },
+      { path: 'approve-blood-requests', icon: <FaClipboardList />, label: 'Blood Requests' }, // ✅ new
       { path: 'manage-appointments', icon: <FaCheckCircle />, label: 'Manage Appointments' },
       { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
     ],
