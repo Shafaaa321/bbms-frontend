@@ -8,13 +8,15 @@ const Header = () => {
 
   // Determine display name
   const displayRole =
-    role === 'admin'
-      ? 'Admin'
-      : subRole === 'donor'
-      ? 'Donor'
-      : subRole === 'receiver'
-      ? 'Hospital'
-      : 'User';
+  role === 'admin'
+    ? 'Admin'
+    : role === 'staff'
+    ? 'Staff Member'
+    : subRole === 'donor'
+    ? 'Donor'
+    : subRole === 'receiver'
+    ? 'Hospital'
+    : 'User';
 
   return (
     <header className="main-header">

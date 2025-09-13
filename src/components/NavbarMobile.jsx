@@ -42,9 +42,7 @@ const NavbarMobile = () => {
       {menuOpen && (
         <div className="mobile-menu">
           <Link to="/user/dashboard"><FaTachometerAlt /> Dashboard</Link>
-          <Link to="/user/donor-registration"><FaUserPlus /> Register Donor</Link>
           <Link to="/user/request-blood"><FaTint /> Request Blood</Link>
-          <Link to="/user/available-donors"><FaUsers /> Available Donors</Link>
           <Link to="/user/blood-inventory"><FaBox /> Blood Inventory</Link>
           <Link to="/user/notifications"><FaBell /> Notifications</Link>
           <Link to="/user/settings"><FaCog /> Settings</Link>

@@ -45,10 +45,10 @@ const DonorDashboard = () => {
           Donor Eligibility
         </button>
         <button
-          className="history-btn"
-          onClick={() => navigate('/donor/history')}
+          className="request-btn"
+          onClick={() => navigate('/donor/request-donate')}
         >
-          View Donation History
+          Request to Donate
         </button>
       </div>
     </div>

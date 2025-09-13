@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import {
   FaBars,
   FaHome,
-  FaUserPlus,
   FaCheckCircle,
   FaHistory,
   FaBell,
@@ -26,14 +25,13 @@ const Sidebar = () => {
 
   const navItems = {
     donor: [
-      { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
-      { path: 'become-donor', icon: <FaUserPlus />, label: 'Become a Donor' },
-      { path: 'eligibility', icon: <FaCheckCircle />, label: 'Eligibility' },
-      { path: 'history', icon: <FaHistory />, label: 'History' },
-      { path: 'donation-request', icon: <FaClipboardList />, label: 'Request to Donate' },
-      { path: 'available-donors', icon: <FaUserPlus />, label: 'Available Donors' },
-      { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
-    ],
+  { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
+  { path: 'eligibility', icon: <FaCheckCircle />, label: 'Eligibility' },
+  { path: 'history', icon: <FaHistory />, label: 'History' },
+  { path: 'request-donate', icon: <FaClipboardList />, label: 'Request to Donate' }, // <-- fixed path
+  { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
+],
+
     receiver: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
       { path: 'request-blood', icon: <FaClipboardList />, label: 'Request Blood' },
@@ -43,8 +41,9 @@ const Sidebar = () => {
     ],
     admin: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
-      { path: 'approve-donors', icon: <FaCheckCircle />, label: 'Approve Donors' },
       { path: 'approve-hospitals', icon: <FaHospital />, label: 'Approve Hospitals' },
+      { path: 'hospital-activities', icon: <FaHospital />, label: 'Hospital Activities' },
+       { path: 'donation-records', icon: <FaHistory />, label: 'Donation Records' },
       { path: 'analytics', icon: <FaChartBar />, label: 'Analytics' },
       { path: 'audit-logs', icon: <FaClipboardList />, label: 'Audit Logs' },
       { path: 'settings', icon: <FaBell />, label: 'Settings' },
@@ -52,9 +51,7 @@ const Sidebar = () => {
     staff: [
       { path: 'dashboard', icon: <FaHome />, label: 'Dashboard' },
       { path: 'donor-requests', icon: <FaClipboardList />, label: 'Donor Requests' },
-      { path: 'donation-records', icon: <FaHistory />, label: 'Donation Records' },
       { path: 'manage-appointments', icon: <FaCheckCircle />, label: 'Manage Appointments' },
-      { path: 'hospital-activities', icon: <FaHospital />, label: 'Hospital Activities' },
       { path: 'notifications', icon: <FaBell />, label: 'Notifications' },
     ],
   };

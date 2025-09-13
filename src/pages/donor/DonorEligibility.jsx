@@ -1,3 +1,4 @@
+// src/pages/donor/DonorEligibility.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './DonorEligibility.css';
@@ -26,23 +27,23 @@ const DonorEligibility = () => {
         <form>
           <label>
             <input type="checkbox" name="age" checked={checks.age} onChange={handleChange} />
-            I am between 18 and 65 years old.
+            Age must be between 18 and 65 years.
           </label>
           <label>
             <input type="checkbox" name="weight" checked={checks.weight} onChange={handleChange} />
-            I weigh at least 50kg (110lbs).
+            Minimum weight required is 50kg (110 lbs).
           </label>
           <label>
             <input type="checkbox" name="recentDonation" checked={checks.recentDonation} onChange={handleChange} />
-            I have not donated blood in the last 3 months.
+            No blood donations in the last 3 months.
           </label>
           <label>
             <input type="checkbox" name="illness" checked={checks.illness} onChange={handleChange} />
-            I am not currently ill, on antibiotics, or have any infections.
+            Free from illness, infection, or antibiotics.
           </label>
           <label>
             <input type="checkbox" name="pregnancy" checked={checks.pregnancy} onChange={handleChange} />
-            I am not pregnant or recently postpartum (if applicable).
+            Not currently pregnant or recently postpartum.
           </label>
         </form>
 
@@ -51,7 +52,7 @@ const DonorEligibility = () => {
             ✅ You are eligible to donate blood.
             <button
               className="request-btn"
-              onClick={() => navigate('/donor/donation-request')} // ✅ Corrected path
+              onClick={() => navigate('/donor/request-donate')} // corrected path
             >
               Request to Donate
             </button>

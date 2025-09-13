@@ -48,15 +48,17 @@ const RequestToDonate = () => {
           />
 
           <label htmlFor="preferredLocation">Preferred Donation Location</label>
-          <input
-            type="text"
+          <select
             id="preferredLocation"
             name="preferredLocation"
             value={formData.preferredLocation}
             onChange={handleChange}
-            placeholder="e.g. Lagos General Hospital"
             required
-          />
+          >
+            <option value="">-- Select a Donation Center --</option>
+            <option value="akth">AKTH Hospital</option>
+            <option value="mmsh">MMSH Hospital</option>
+          </select>
 
           <label htmlFor="availabilityNote">Availability Note</label>
           <input

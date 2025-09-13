@@ -17,12 +17,10 @@ import StaffLayout from './layouts/StaffLayout';
 
 // Donor Pages
 import DonorDashboard from './pages/donor/Dashboard';
-import BecomeDonor from './pages/donor/BecomeDonor';
 import DonorEligibility from './pages/donor/DonorEligibility';
 import DonationHistory from './pages/donor/DonationHistory';
 import DonorNotifications from './pages/donor/Notifications';
 import RequestToDonate from './pages/donor/RequestToDonate';
-import AvailableDonors from './pages/donor/AvailableDonors';
 
 // Hospital Pages
 import HospitalDashboard from './pages/hospital/Dashboard';
@@ -33,19 +31,19 @@ import HospitalNotifications from './pages/hospital/Notifications';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
-import ApproveRequests from './pages/admin/ApproveRequests';
 import ApproveHospitals from './pages/admin/ApproveHospitals';
 import Analytics from './pages/admin/Analytics';
 import AuditLogs from './pages/admin/AuditLogs';
 import Settings from './pages/admin/Settings';
+import HospitalActivities from './pages/admin/HospitalActivities';
+import DonationRecords from './pages/admin/DonationRecords';
 
 // Staff Pages
 import StaffDashboard from './pages/staff/Dashboard';
 import DonorRequests from './pages/staff/DonorRequests';
-import DonationRecords from './pages/staff/DonationRecords';
 import StaffNotifications from './pages/staff/Notifications';
 import ManageAppointments from './pages/staff/ManageAppointments';
-import HospitalActivities from './pages/staff/HospitalActivities';
+
 
 
 
@@ -64,7 +62,6 @@ function App() {
       {isLoggedIn && role === 'admin' && (
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="approve-donors" element={<ApproveRequests />} />
           <Route path="approve-hospitals" element={<ApproveHospitals />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="audit-logs" element={<AuditLogs />} />
@@ -73,17 +70,16 @@ function App() {
       )}
 
       {/* Donor Routes */}
-      {isLoggedIn && role === 'user' && subRole === 'donor' && (
-        <Route path="/donor" element={<DonorLayout />}>
-          <Route path="dashboard" element={<DonorDashboard />} />
-          <Route path="become-donor" element={<BecomeDonor />} />
-          <Route path="eligibility" element={<DonorEligibility />} />
-          <Route path="history" element={<DonationHistory />} />
-          <Route path="notifications" element={<DonorNotifications />} />
-          <Route path="donation-request" element={<RequestToDonate />} />
-          <Route path="available-donors" element={<AvailableDonors />} />
-        </Route>
-      )}
+{isLoggedIn && role === 'user' && subRole === 'donor' && (
+  <Route path="/donor" element={<DonorLayout />}>
+    <Route path="dashboard" element={<DonorDashboard />} />
+    <Route path="eligibility" element={<DonorEligibility />} />
+    <Route path="history" element={<DonationHistory />} />
+    <Route path="notifications" element={<DonorNotifications />} />
+    <Route path="request-donate" element={<RequestToDonate />} /> {/* Corrected */}
+  </Route>
+)}
+
 
       {/* Hospital Routes */}
       {isLoggedIn && role === 'user' && subRole === 'receiver' && (

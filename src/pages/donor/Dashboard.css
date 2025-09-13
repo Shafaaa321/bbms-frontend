@@ -48,36 +48,60 @@
   color: #f9a825;
 }
 
+
+/* Buttons: equal width & height */
 .button-group {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  align-items: center;  /* ensures buttons align vertically */
 }
 
+.button-group button {
+  flex: 1;                  /* equal width */
+  max-width: 200px;         /* optional */
+  height: 50px;             /* same height for all buttons */
+  margin: 0;                /* reset any default margins */
+  padding: 0 1.5rem;        /* horizontal padding only */
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* vertical centering */
+  box-sizing: border-box;   /* include padding in height */
+}
+
+/* Donate button */
 .donate-btn {
   background-color: #e53935;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .donate-btn:hover {
   background-color: #c62828;
 }
 
+/* Request to Donate button */
+.request-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.request-btn:hover {
+  background-color: #388e3c;
+}
+
+/* History button (if still used) */
 .history-btn {
   background-color: white;
   color: #e53935;
   border: 2px solid #e53935;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .history-btn:hover {
