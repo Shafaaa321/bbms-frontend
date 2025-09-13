@@ -1,0 +1,60 @@
+/* src/pages/hospital/Notifications.css */
+
+.notifications-container {
+  padding: 2rem;
+  color: #1f2937;
+}
+
+.notifications-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.notification-card {
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+}
+
+.message {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.time {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Types */
+.notif-success {
+  border-left: 5px solid #10b981;
+}
+
+.notif-info {
+  border-left: 5px solid #3b82f6;
+}
+
+.notif-warning {
+  border-left: 5px solid #f59e0b;
+}
+
+.notif-error {
+  border-left: 5px solid #ef4444;
+}

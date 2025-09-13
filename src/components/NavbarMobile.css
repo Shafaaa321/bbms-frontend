@@ -1,0 +1,63 @@
+/* src/components/NavbarMobile.css */
+
+.navbar-mobile {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.app-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-menu a:hover,
+.mobile-menu button:hover {
+  color: #28a745;
+}
+
+.logout-btn {
+  font-weight: bold;
+  color: #e63946;
+}

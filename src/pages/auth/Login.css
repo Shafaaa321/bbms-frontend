@@ -1,0 +1,77 @@
+/* src/pages/auth/Login.css */
+
+.role-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.heading p {
+  color: #636e72;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+.role-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.role-card span {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: #2d3436;
+  font-size: 1rem;
+}
+
+.role-card.admin { border-top: 4px solid #0984e3; }
+.role-card.donor { border-top: 4px solid #e17055; }
+.role-card.hospital { border-top: 4px solid #d63031; }
+.role-card.staff { border-top: 4px solid #6c5ce7; }
+
+@media (max-width: 600px) {
+  .role-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .roles-grid {
+    gap: 1rem;
+  }
+}

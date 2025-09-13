@@ -1,0 +1,29 @@
+/* src/components/Header.css */
+.main-header {
+  width: 100%;
+  background-color: #fefefe;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-header h1 {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.role-badge {
+  background-color: #10b981;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

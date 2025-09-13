@@ -1,0 +1,34 @@
+/* src/layouts/Layout.css */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 70px; /* default collapsed sidebar width */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-wrapper.expanded + .main-content {
+  margin-left: 220px; /* expanded sidebar width */
+}
+
+.page-content {
+  padding: 1rem 2rem;
+  background-color: #f9fafb;
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 70px; /* stays minimal on mobile too */
+  }
+
+  .page-content {
+    padding: 1rem;
+  }
+}

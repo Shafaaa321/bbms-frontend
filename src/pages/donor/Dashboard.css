@@ -1,0 +1,85 @@
+/* src/pages/donor/Dashboard.css */
+
+.donor-dashboard {
+  margin-left: 60px;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.donor-dashboard h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.info-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: green;
+}
+
+.info-card.red p {
+  color: #e53935;
+}
+
+.info-card.yellow p {
+  color: #f9a825;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.donate-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #c62828;
+}
+
+.history-btn {
+  background-color: white;
+  color: #e53935;
+  border: 2px solid #e53935;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.history-btn:hover {
+  background-color: #fbe9e7;
+}

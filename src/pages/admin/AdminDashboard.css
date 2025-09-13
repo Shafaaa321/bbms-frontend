@@ -1,0 +1,50 @@
+.admin-dashboard {
+  padding: 2rem;
+}
+
+.welcome-text {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.03);
+}
+
+.stat-card .icon {
+  font-size: 1.8rem;
+}
+
+.card-red {
+  background-color: #e74c3c;
+}
+
+.card-blue {
+  background-color: #3498db;
+}
+
+.card-yellow {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.card-green {
+  background-color: #2ecc71;
+}

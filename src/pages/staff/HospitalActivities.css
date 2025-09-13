@@ -1,0 +1,25 @@
+/* src/pages/staff/HospitalActivities.css */
+.hospital-activities-page {
+  padding: 2rem;
+}
+
+.hospital-activities-page h2 {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+  background-color: #fff;
+}
+
+th {
+  background-color: #f2f2f2;
+}

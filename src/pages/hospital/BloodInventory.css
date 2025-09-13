@@ -1,0 +1,64 @@
+/* src/pages/hospital/BloodInventory.css */
+
+.inventory-container {
+  padding: 2rem;
+  color: #1f2937;
+}
+
+.inventory-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar input {
+  padding: 0.6rem 1rem;
+  width: 280px;
+  max-width: 90%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #10b981;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blood-card {
+  background-color: #f3f4f6;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.blood-card:hover {
+  transform: translateY(-4px);
+}
+
+.blood-type {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+.blood-units {
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}

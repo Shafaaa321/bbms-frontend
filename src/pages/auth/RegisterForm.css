@@ -1,0 +1,65 @@
+.register-form-container {
+  max-width: 450px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-form-container h2 {
+  color: #cc0000;
+  margin-bottom: 1.5rem;
+}
+
+.register-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form-container input,
+.register-form-container select {
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.register-form-container button {
+  padding: 12px;
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.register-form-container button:hover {
+  background-color: #a30000;
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.login-link {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.login-link span {
+  color: #cc0000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.file-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}

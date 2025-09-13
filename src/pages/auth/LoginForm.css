@@ -1,0 +1,78 @@
+/* src/pages/auth/LoginForm.css */
+
+.login-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #e0f2f1, #f1f8e9);
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 24px;
+  color: #2e7d32;
+  font-size: 26px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box input {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #66bb6a;
+  box-shadow: 0 0 0 2px #c8e6c9;
+}
+
+.login-box button {
+  background-color: #43a047;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #388e3c;
+}
+
+.register-link {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-link span {
+  color: #2e7d32;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.register-link span:hover {
+  text-decoration: underline;
+}

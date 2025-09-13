@@ -1,0 +1,55 @@
+.approve-hospitals-container {
+  padding: 2rem;
+}
+
+.status-message {
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #e7f4e4;
+  border-left: 5px solid #3c763d;
+  color: #2e5d34;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+button.approve {
+  background-color: #4caf50;
+  color: white;
+  margin-right: 0.5rem;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button.reject {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.license-link {
+  background: none;
+  color: blue;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
