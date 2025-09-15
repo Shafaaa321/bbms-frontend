@@ -7,7 +7,7 @@ const DonorDashboard = () => {
   const navigate = useNavigate();
 
   const profile = {
-    name: 'John Doe',
+    name: 'Donor',
     bloodGroup: 'O+',
     donations: 4,
     lastDonation: '2024-03-20',
